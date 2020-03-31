@@ -12,4 +12,4 @@ Websocket 协议允许在一个受控环境中运行不受信任代码的客户�
 
 Copyright (c) 2011 IETF Trust and the persons identified as the document authors. All rights reserved.
 
-本文档受 BCP 78 和 IETF Trust 有关 IETF 文件的法律规定 （http://trustee.IETF.org/license-info）的约束，该法律规定在本文件发布之日起生效。请仔细阅读这些文件，因为他们描述了您对本文档的权利和限制。从本文档提取的代码组件必须包含如第 4 节所述的法律规定的包含简化的 BSD 许可证文本。
+本文档受 BCP 78 和 IETF Trust 有关 IETF 文件的法律规定（[http://trustee.IETF.org/license-info](http://trustee.IETF.org/license-info)）的约束，该法律规定在本文件发布之日起生效。请仔细阅读这些文件，因为他们描述了您对本文档的权利和限制。从本文档提取的代码组件必须包含如第 4 节所述的法律规定的包含简化的 BSD 许可证文本。
