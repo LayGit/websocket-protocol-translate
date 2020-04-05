@@ -16,17 +16,17 @@ Sec-WebSocket-Version: 13
 
 WebSocket 连接的地址由一个支持 GET 方法请求的 URI [[RFC2616](https://tools.ietf.org/html/rfc2616)] 来定义，既允许一个 IP 地址服务多个域名，也允许单个服务器服务多个 WebSocket 地址。
 
-客户端通过在握手包中设置 Host 请求头字段来传输主机名，这样客户端和服务端都能知道是与哪个主机建立了连接。剩下的那些请求头字段用于 WebSocket 协议中的定义字段。这个版本定义的字段有：子协议选择（Sec-WebSocket-Protocol）、客户端扩展列表（Sec-WebSocket-Extensions）、Origin 字段等等。Sec-WebSocket-Protocol 请求头字段可以用来表示客户端支持哪些子协议（在 WebSocket 协议层之上的应用层协议）。服务端从可以从中选择一个协议或者不选择任何协议，并且在响应握手包中告诉客户端自己的选择。
+客户端通过在握手包中设置 Host 请求头字段来传输主机名，这样客户端和服务端都能知道是与哪个主机建立了连接。剩下的那些请求头字段用于 WebSocket 协议中的定义字段。这个版本定义的字段有：子协议选择（Sec-WebSocket-Protocol）、客户端扩展列表（Sec-WebSocket-Extensions）、Origin 字段等等。`Sec-WebSocket-Protocol` 请求头字段可以用来表示客户端支持哪些子协议（在 WebSocket 协议层之上的应用层协议）。服务端从可以从中选择一个协议或者不选择任何协议，并且在响应握手包中告诉客户端自己的选择。
 
 ```
 Sec-WebSocket-Protocol: chat
 ```
 
-Origin 字段 [[RFC6454](https://tools.ietf.org/html/rfc6454)] 用于保护 WebSocket 服务端免受那些未授权的在 Web 浏览器中运行的 WebSocket API 脚本的跨域攻击。服务端能够获悉生成 WebSocket 连接请求的脚本域来源，如果服务端不像接收此来源的请求，可以通过发送一个 HTTP 错误码来拒绝该连接。这个字段由客户端发送，对于非浏览器客户端，如果它在客户端环境中有意义，也可以发送。
+Origin 字段 [[RFC6454](https://tools.ietf.org/html/rfc6454)] 用于保护 WebSocket 服务端免受那些未授权的在 Web 浏览器中运行的 WebSocket API 脚本的跨域攻击。服务端能够获悉生成 WebSocket 连接请求的脚本域来源，如果服务端不想接收此来源的请求，可以通过发送一个 HTTP 错误码来拒绝该连接。这个字段由客户端发送，对于非浏览器客户端，如果它在客户端环境中有意义，也可以发送。
 
 最后，服务端要给客户端证明自己收到了客户端的 WebSocket 握手包，以便拒绝那些不是 WebSocket 的连接。这可以防范那些通过 [XMLHttpRequest](https://tools.ietf.org/html/rfc6455#ref-XMLHttpRequest) 或者表单发出的高仿包攻击的攻击者。
 
-为了证明收到了握手包，服务端必须回复一个由两部分信息组成的响应包。第一部分信息来自客户端请求头中的 Sec-WebSocket-Key 字段：
+为了证明收到了握手包，服务端必须回复一个由两部分信息组成的响应包。第一部分信息来自客户端请求头中的 `Sec-WebSocket-Key` 字段：
 
 ```
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
