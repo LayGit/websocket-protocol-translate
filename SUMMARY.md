@@ -4,6 +4,7 @@
 * [1. 协议介绍](#)
   * [1.1 背景介绍](ch1/1_1_Background.md)
   * [1.2 协议概览](ch1/1_2_Protocol_Overview.md)
+  * [1.3 开始阶段握手](ch1/1_3_Opening_Handshake.md)
 * [2. 一致性要求](#)
 * [3. 网址规范](#)
 * [4. 握手连接](#)
