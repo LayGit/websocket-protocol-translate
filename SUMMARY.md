@@ -6,6 +6,7 @@
   * [1.2 协议概览](ch1/1_2_Protocol_Overview.md)
   * [1.3 打开阶段握手](ch1/1_3_Opening_Handshake.md)
   * [1.4 关闭阶段握手](ch1/1_4_Closing_Handshake.md)
+  * [1.5 设计理念](ch1/1_5_Design_Philosophy.md)
 * [2. 一致性要求](#)
 * [3. 网址规范](#)
 * [4. 握手连接](#)
